@@ -1,5 +1,6 @@
-**Hyperspectral Soil Spectrum**  
-**Enotrium // (Aiden Young, 2025)**
+*Hyperspectral Soil Spectrum*
+**Enotrium // (Enotrium AIP 2025)**
+
 
 ### Introduction
 As is obvious, current artificial intelligence approaches to environmental monitoring rely heavily on low-dimensional RGB or multispectral indices such as NDVI. Human perception of soil health operates as a fundamentally subjective and limited experience — we cannot directly observe the hundreds of spectral reflectance bands that encode contamination profiles, microbial activity, nutrient density, and CO₂ sequestration capacity. We’ve utilized publicly available UAV hyperspectral imaging (HSI) datasets and simulated drone-captured reflectance cubes to demonstrate that spectral activation patterns contain rich diagnostic information that can inform precise phytoremediation, land valuation, and regenerative supply-chain transparency.
