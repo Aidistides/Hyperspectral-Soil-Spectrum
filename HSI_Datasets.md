@@ -7,6 +7,7 @@ Perfect for training / fine-tuning the Enotrium 3D CNN pipeline.
 |---------|------|---------------|--------------------|---------------|-------------|
 | **HYPERVIEW2 (AI4EO Challenge)** | Airborne HSI (Poland) | ~150 bands, VNIR-SWIR | Patch-based | Soil parameters (K, Mg, P₂O₅, pH) — direct match for regenerative soil health | [EOTDL Download](https://www.eotdl.com/datasets/HYPERVIEW2) |
 | **LUCAS 2015 Topsoil Spectral Library** (EU) | Lab VNIR-SWIR (point + images) | 400–2500 nm (0.5 nm res) | Point spectra | Pan-European soil properties + heavy metals; widely used benchmark | [ESDAC (free after registration)](https://esdac.jrc.ec.europa.eu/content/lucas2015-topsoil-data) |
+| **USGS Spectral Library v7 (splib07)** | Lab reflectance spectra (point) | 0.2–3.0 µm (VNIR-SWIR-MIR) | Point spectra | Authoritative soil, mineral & organic compound reference library; useful for spectral pre-training, wavelength validation, and contaminant signature matching | [USGS ScienceBase](https://www.sciencebase.gov/catalog/item/5807a2a2e4b0841e59e3a18d) |
 | **Indian Pines** | AVIRIS airborne | 200 bands (400–2500 nm) | 145×145 | Classic agricultural / soil benchmark | [EHUB Hyperspectral Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes) |
 | **Salinas** | AVIRIS airborne | 224 bands (400–2500 nm) | 512×217 | Agricultural fields + bare soil | [EHUB Hyperspectral Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes) |
 | **Pavia University** | ROSIS airborne | 103 bands | 610×340 | Urban/soil mix benchmark | [EHUB Hyperspectral Scenes](https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes) |
@@ -17,7 +18,7 @@ Perfect for training / fine-tuning the Enotrium 3D CNN pipeline.
 | **HyperPRI** | Underground root HSI + RGB | VNIR | Root-scale | Soil-root interaction (phytoremediation relevant) | [UF ML Lab / ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0168169924006987) |
 | **Plastic Debris Hyperspectral Database (2024)** | Lab SWIR reflectance | 400–2500 nm | Spectra + images | Microplastics in water/soil matrices (PE, PP, PET, etc.) | [Nature Scientific Data](https://www.nature.com/articles/s41597-024-03974-x) |
 
-### Quick Start Recommendation for Enotrium Pipeline
+### Enotrium Pipeline
 1. **Start here** → HYPERVIEW2 + LUCAS 2015 (soil parameters + ground truth).  
 2. Add **Plastic Debris Database** for microplastics pre-training.  
 3. Fine-tune on your own UAV 400–2500 nm cubes.
