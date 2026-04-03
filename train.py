@@ -14,6 +14,8 @@ import warnings
 from model import SoilHSI3DCNN
 from dataset import HyperspectralSoilDataset
 
+from hyperspectral_soil.deep_learning import SpectralCNN, DLTrainer
+
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
