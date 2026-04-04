@@ -1,3 +1,13 @@
+# ENVI
+import spectral as sp
+img = sp.open_image('data/hyperview_patches/envi/patch_xxx.hdr')
+print(img.shape, img.metadata['wavelength'][:5])  # (h, w, 150)
+
+# Or TIFF
+import rasterio
+with rasterio.open('data/.../patch_xxx.tif') as src:
+    cube = src.read()  # (150, h, w)
+
 from soiloptix_hsi.pipeline import run_soiloptix_hsi_pipeline
 
 run_soil_hsi_pipeline(
