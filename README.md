@@ -70,6 +70,36 @@ Our implementation uses a three-stage preprocessing approach optimized for spect
 where \( S \) performs dimension validation, \( R \) applies spatial resizing, and \( N \) implements spectral normalization.
 
 ## Usage
+### Broadband Reflectance Features
+
+In addition to the full hyperspectral cube, the following broadband statistics are computed per pixel (or per region of interest) to capture overall soil brightness, texture variation, and moisture-related properties:
+
+- **Mean reflectance and standard deviation** in the visible spectrum (VIS; 400–700 nm), near-infrared (NIR; 700–1300 nm), and short-wave infrared (SWIR; 1300–2500 nm)
+- **NIR/SWIR ratio**: \( R_{860\,\text{nm}} / R_{1610\,\text{nm}} \)
+
+Mean reflectance captures overall soil brightness, while the standard deviation reflects variation due to crop residue, bare soil patches, or surface heterogeneity. The NIR/SWIR ratio is a strong proxy for surface moisture and texture.
+
+### HSI Indices Used
+
+The pipeline also computes the following widely adopted hyperspectral indices. These serve both as interpretable features for downstream analysis and as strong baselines against which the 3D CNN’s learned spectral-spatial patterns are evaluated:
+
+**NDVI** (Normalized Difference Vegetation Index)  
+Indexes density and health of vegetation/foliage. Healthy foliage strongly absorbs red light.  
+\[
+\text{NDVI} = \frac{R_{\text{NIR}} - R_{\text{Red}}}{R_{\text{NIR}} + R_{\text{Red}}}
+\]
+
+**Red-edge slope and position**  
+The “red edge” marks the sharp transition from strong absorption in the red to high reflectance in the NIR. Both the slope and the wavelength of the inflection point are sensitive indicators of foliage vitality and stress.
+
+**NDWI** (Normalized Difference Water Index)  
+\[
+\text{NDWI} = \frac{R_{860} - R_{1240}}{R_{860} + R_{1240}}
+\]  
+Higher NDWI values indicate greater surface water content. It also serves as a proxy for electrical conductivity, contaminant transport potential, and redox-sensitive metal mobility.
+
+**NIR/SWIR ratio** (860 nm / 1610 nm)  
+Directly related to water absorption. A lower ratio signals higher water absorption and therefore wetter surface conditions, which correlate with increased microbial activity and higher mobility of many soil contaminants.
 
 from hyperspectral_soil.preprocessing import PreprocessingPipeline
 
