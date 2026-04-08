@@ -276,3 +276,8 @@ The following datasets are ideal starting points for testing the preprocessing p
 **Not recommended**: Karlsruhe soil moisture dataset (only tabular point spectra, no spatial image cubes).
 
 Other soil-specific ENVI libraries can be exported from SPECCHIO (specchio.ch) or found by searching Zenodo/Mendeley for “soil hyperspectral ENVI”.
+
+
+https://oar.icrisat.org/13212/
+
+https://www.sciencedirect.com/science/article/pii/S2949919425000305
