@@ -1,0 +1,12 @@
+model:
+  num_bands: 200
+  target_size: [64, 64]
+
+training:
+  lr: 0.0003
+  weight_decay: 0.05
+  epochs: 50
+  batch_size: 16
+
+data:
+  wavelength_range: [400, 2500]
