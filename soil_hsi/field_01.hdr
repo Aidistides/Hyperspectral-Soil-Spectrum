@@ -1,0 +1,32 @@
+import numpy as np
+import spectral.io.envi as envi
+from soil_hsi.preprocessing import PreprocessingPipeline
+
+# Load
+img = envi.open('field_01.hdr')
+your_cube = img.load().astype(np.float32)
+metadata = img.metadata
+
+print(f"✅ Loaded cube shape: {your_cube.shape}")
+print(f"   Bands: {your_cube.shape[2]}")
+print(f"   Spatial: {your_cube.shape[0]} x {your_cube.shape[1]} pixels")
+
+# Wavelengths — with fallback if not in header
+if 'wavelength' in metadata:
+    wavelengths = np.array(metadata['wavelength'], dtype=float)
+    print(f"   Wavelength range: {wavelengths[0]:.1f} – {wavelengths[-1]:.1f} nm")
+else:
+    # Fallback: assume 224 bands evenly spaced 400–2500 nm
+    wavelengths = np.linspace(400, 2500, your_cube.shape[2])
+    print("⚠️  No wavelength metadata found — using estimated range 400–2500 nm")
+
+# Preprocess
+pipeline = PreprocessingPipeline(
+    smoothing=True,
+    normalization="snv",
+    continuum=True,
+    wavelength_range=(400, 2500)
+)
+
+X_processed, wl_out = pipeline.transform(your_cube, wavelengths)
+print(f"✅ Preprocessed shape: {X_processed.shape}")
