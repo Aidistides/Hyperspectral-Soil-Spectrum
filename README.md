@@ -301,7 +301,7 @@ High confidence on clean/remediated land and early-warning contamination alerts;
 
 
 ### Questions
-UAV HSI data from varying flight conditions is volatile to work with, and reliance on multi-source datasets without perfectly standardized calibration certainly doesn’t help. Nonetheless the above-benchmark results suggest a strong correlation worth scaling, indicating that integrating hyperspectral reflectance data into OrpheusAI provides essential insights into soil biology and chemistry for regenerative economics.
+UAV HSI data from varying flight conditions is volatile to work with, and reliance on multi-source datasets without perfectly standardized calibration certainly doesn’t help. Nonetheless the strong empirical performance in simulation suggests a strong correlation worth scaling, indicating that integrating hyperspectral reflectance data into OrpheusAI provides essential insights into soil biology and chemistry for regenerative economics.
 
 Future work should expand beyond single-drone HSI to incorporate the full spectrum of ground-truth signals identified in the whitepaper (portable XRF, soil microbiome sequencing, IoT sensor arrays). This multi-modal approach, combined with the CNN backbone and zero-knowledge proofs, could enable Enotrium’s platform to deliver privacy-preserving, verifiable land valuation and supply-chain transparency at continental scale — turning degraded soil into a self-generating, data-rich economic asset.
 
