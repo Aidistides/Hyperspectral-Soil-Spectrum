@@ -21,7 +21,7 @@ The output is a layer over land use and input economics.
 Soil chemistry determines crop yield and input costs.
 By predicting soil conditions at scale, we can:
 - contract farms based on expected output
-- optimize hemp production
+- optimize crop selection and downstream material propertie
 - control downstream material tensile stregnth
 
 ## Deployment
