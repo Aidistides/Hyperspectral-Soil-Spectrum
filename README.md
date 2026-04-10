@@ -10,6 +10,8 @@ and is deployed in Enotrium’s pipeline to contract farms and optimize crop eco
 
 This pipeline converts raw spectral data into actionable soil intelligence.
 
+This pipeline converts hyperspectral reflectance into actionable soil intelligence.
+
 Instead of sampling soil manually, we:
 - scan entire fields using UAV hyperspectral imaging
 - reconstruct chemical and biological properties from spectral signatures
@@ -24,6 +26,12 @@ By predicting soil conditions at scale, we can:
 - optimize crop selection and downstream material propertie
 - control downstream material tensile stregnth
 
+The model output directly informs:
+- land valuation
+- crop selection
+- contamination detection
+- input optimization
+
 ## Deployment
 - Integrated with drone-based hyperspectral imaging system  
 - Used in MD commercial farm contracting workflows  
@@ -31,7 +39,7 @@ By predicting soil conditions at scale, we can:
 
 
 ### Introduction
-As is obvious, current artificial intelligence approaches to environmental monitoring rely heavily on low-dimensional RGB or multispectral indices such as NDVI. Human perception of soil health operates as a fundamentally subjective and limited experience — we cannot directly observe the hundreds of spectral reflectance bands that encode contamination profiles, microbial activity, nutrient density, and CO₂ sequestration capacity. We’ve utilized publicly available UAV hyperspectral imaging (HSI) datasets and simulated drone-captured reflectance cubes to demonstrate that spectral activation patterns contain rich diagnostic information that can inform precise phytoremediation, land valuation, and regenerative supply-chain transparency.
+Current artificial intelligence approaches to environmental monitoring rely heavily on low-dimensional RGB or multispectral indices such as NDVI. Human perception of soil health operates as a fundamentally subjective and limited experience — we cannot directly observe the hundreds of spectral reflectance bands that encode contamination profiles, microbial activity, nutrient density, and CO₂ sequestration capacity. We’ve utilized publicly available UAV hyperspectral imaging (HSI) datasets and simulated drone-captured reflectance cubes to demonstrate that spectral activation patterns contain rich diagnostic information that can inform precise phytoremediation, land valuation, and regenerative supply-chain transparency.
 
 This work implements a **Convolutional Neural Network (CNN)** architecture optimized for soil health classification and contaminant mapping from UAV HSI data. While HSI presents known limitations in atmospheric interference and the need for ground-truth calibration, deep learning architectures may be able to extract subtle spectral-spatial patterns that traditional analysis methods miss.
 
