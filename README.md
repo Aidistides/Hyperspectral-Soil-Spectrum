@@ -1,5 +1,5 @@
 *Hyperspectral Soil Spectrum*
-**Enotrium // (Enotrium AIP 2025)**
+**Enotrium // Agri-Intelligence**
  
 # Hyperspectral CNN for soil chemistry prediction.
 
